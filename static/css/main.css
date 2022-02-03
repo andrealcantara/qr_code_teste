@@ -1,0 +1,7 @@
+/*Cores oficiais*/
+#logo path:nth-child(1){
+  fill:#cd191e;
+}
+#logo path:nth-child(n+2):nth-child(-n+10){
+  fill:#2f9e41;
+}
