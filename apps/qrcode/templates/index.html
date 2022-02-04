@@ -1,17 +1,13 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block main %}
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-auto">
             O ingresso seguro é o portal onde os alunos podem baixar suas credenciais após se cadastrar e ser validado no processo do fluxo.
             Para baixar você vai ter que se logar pelo acesso ifpe.
         </div>
-        <div></div>
+        <div>
+            <a href="{% url 'scan' %}">Clique aqui</a> para validar o QRCode
+        </div>
     </div>
-{% endblock %}
-
-{% block footer %}
-    <script type="application/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"m></script>
-    <script type="application/javascript" src="{% static 'js/instascan.min.js' %}"></script>
 {% endblock %}

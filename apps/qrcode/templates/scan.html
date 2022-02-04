@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block main %}
+    <div class="row">
+        <h1> Scan</h1>
+    </div>
+    <div class="row">
+        <div class="col-auto">
+            <video id="preview" class="p-1 border" style="width:100%;"></video>
+        </div>
+    </div>
+    <div class="row">
+        <div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="radio" name="options" value="1" autocomplete="off" > Front Camera
+            </label>
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" value="2" autocomplete="off" checked> Back Camera
+            </label>
+        </div>
+    </div>
+{% endblock %}
+
+{% block header %}
+    <script type="application/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}" m></script>
+    <script src="{% static 'js/instascan.min.js' %}"></script>
+    <script src="{% static 'js/scan.js' %}"></script>
+{% endblock %}
